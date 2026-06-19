@@ -1,0 +1,25 @@
+package org.example;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+public class Main {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Main.class, args);
+    }
+
+    @GetMapping("/")
+    public String hello() {
+        return "Hello! 项目跑起来了！";
+    }
+
+    @GetMapping("/test")
+    public String test() {
+        return "测试成功！时间戳：" + System.currentTimeMillis();
+    }
+}
