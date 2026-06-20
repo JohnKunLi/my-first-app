@@ -15,11 +15,11 @@ public class Main {
 
     @GetMapping("/")
     public String hello() {
-        return "Hello! 项目跑起来了！";
+        return "Hello! Branch项目跑起来了！";
     }
 
     @GetMapping("/test")
     public String test() {
-        return "测试成功！时间戳：" + System.currentTimeMillis();
+        return "测试成功！Branch时间戳：" + System.currentTimeMillis();
     }
 }
