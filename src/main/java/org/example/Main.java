@@ -20,6 +20,6 @@ public class Main {
 
     @GetMapping("/test")
     public String test() {
-        return "测试成功！Master时间戳：" + System.currentTimeMillis();
+        return "测试成功！Branch时间戳：" + System.currentTimeMillis();
     }
 }
