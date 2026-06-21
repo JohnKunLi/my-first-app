@@ -1,0 +1,31 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        enabled: true
+        register-enabled: true
+    sentinel:
+      transport:
+        dashboard: localhost:8858  # Sentinel 控制台地址（后续部署）
+      enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 1
+
+# 开启 Feign 日志（可选，方便调试）
+logging:
+  level:
+    org.example.consumer.client: DEBUG
